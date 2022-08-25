@@ -1,0 +1,15 @@
+name: CI
+on:
+  workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        Plan: [1,2,3,4,5]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: saf10flower/node11@v4
+        with:
+          args: 'CPF13L4OIJSLBS6BGNUU7G9EVJ'
